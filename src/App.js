@@ -1,9 +1,10 @@
-import {useState} from "react";
+import { useState } from "react";
+import {sum} from "./helpers/sum/sum";
 
 function App() {
     const [state, setState] = useState(0)
 
-    const increment = () => setState(prev => prev + 1);
+    const increment = () => setState(prev => sum(prev, 1));
 
     return (
         <div className="App">
