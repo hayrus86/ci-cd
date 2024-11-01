@@ -7,15 +7,10 @@ function App() {
 
     const increment = () => setState(prev => sum(prev, 1));
     const decrement = () => setState(prev => minus(prev, 1));
-    const get_color = () => {
-        console.log(state);
-        
-        return state >= 0 ? 'blue' : 'red'
-    }
 
     return (
         <div className="App">
-            <h1 style={{ fontSize: 70, color: {get_color} }}>value = {state}</h1>
+            <h1 style={{ fontSize: 70, color: state >= 0 ? 'blue' : 'red' }}>value = {state}</h1>
             <button
                 style={{background: 'black', color: "white", padding: 15}}
                 onClick={increment}
