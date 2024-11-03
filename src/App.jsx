@@ -5,8 +5,14 @@ import { minus } from './helpers/minus/minus';
 function App() {
   const [state, setState] = useState(20);
 
-  const increment = () => setState((prev) => sum(prev, 1));
-  const decrement = () => setState((prev) => minus(prev, 1));
+  const getRandom = (min, max) => {
+    const min1 = Math.ceil(min);
+    const max2 = Math.floor(max);
+    return Math.floor(Math.random() * (max2 - min1 + 1)) + min;
+  };
+
+  const increment = () => setState((prev) => sum(prev, getRandom(1, 5)));
+  const decrement = () => setState((prev) => minus(prev, getRandom(1, 5)));
   const getColor = () => (state >= 0 ? 'blue' : 'red');
   const getFont = () => (state > 20 ? state : 20);
 
