@@ -18,10 +18,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1 style={{ fontSize: getFont(), color: getColor() }}>
-        value =
-        {state}
-      </h1>
       <button
         type="button"
         style={{ background: 'black', color: 'white', padding: 15 }}
@@ -37,6 +33,11 @@ function App() {
       >
         decrement
       </button>
+
+      <h1 style={{ fontSize: getFont(), color: getColor() }}>
+        value =
+        {state}
+      </h1>
 
     </div>
   );
